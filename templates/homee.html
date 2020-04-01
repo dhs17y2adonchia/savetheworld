@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+
+<style>
+
+p {
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* details of hw css */
+.dett {
+width: 300px;
+height: 60px;
+}
+
+/* all input boxes */
+input[type=date], input[type=text], input[type=submit], .datalist {
+border: 1px solid #ccc;
+padding: 5px;
+margin: 5px 0 22px 0;
+display: inline-block;
+border: none;
+background: #f1f1f1;
+border-radius: 5px;
+transition: 0.5s;
+width: 300px;
+}
+
+/* hover effect */
+input[type=date]:focus, input[type=text]:focus, input[type=button]:focus, .datalist:focus {
+border: 1px solid #555;
+background-color: #ddd;
+outline: none;
+border-radius: 5px;
+}
+
+/* submit button */
+.submit {
+background-color: #001DFF;
+border: none;
+color: white;
+padding: 8px 32px;
+text-decoration: none;
+font-size: 10px;
+margin: 4px 2px;
+cursor: pointer;
+width: 190px;
+opacity: 0.6;
+border-radius: 5px;
+}
+
+.submit:hover, .submit:focus {
+opacity: 1.0;
+border-radius: 5px;
+outline: none;
+}
+
+/* Add padding to container elements */
+.container {padding: 16px;}
+
+/* The Modal (background) */
+.modal {
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: #000000;
+padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+background-color: #fefefe;
+margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+border: 1px solid #888;
+width: 40%; /* Could be more or less, depending on screen size */
+}
+
+.wrapper {
+    text-align: center;
+}
+
+@keyframes bgcolor {
+    0% {
+        background-color: #45a3e5;
+    }
+
+    30% {
+        background-color: #66bf39;
+    }
+
+    60% {
+        background-color: #eb670f;
+    }
+
+    90% {
+        background-color: #f35;
+    }
+
+    100% {
+        background-color: #864cbf;
+    }
+}
+
+.modal-content {
+    -webkit-animation: bgcolor 20s infinite;
+    animation: bgcolor 10s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+  padding: 16px 32px;
+}
+
+table, td, th {
+  border: 1px solid black;
+  padding: 18px;
+  text-align: center;
+}
+
+</style>
+
+
+
+<head>
+    <title>List of Homework!</title>
+</head>
+    <div class="modal">
+      <form action="/homee" class="modal-content" methods=["POST", "GET"]>
+        <div class="container">
+<body>
+    <p style="text-align: center;"><b> List of homework </b></p>
+<table>
+  <tr>
+    <th>Subject</th>
+    <th>Homework</th>
+    <th>Details of homework</th>
+    <th>Date</th>
+  </tr>
+  <tr>
+    <td>{{aa}}</td>
+    <td>{{bb}}</td>
+    <td>{{cc}}</td>
+    <td>{{dd}}</td>
+  </tr>
+</table>
+
+      <div class="wrapper">
+        <button type="submit" class="submit" style="text-align:center;"> There isn't much to do here, is there? Sign out!</button>
+      </div>
+    </form>
+
+</body>
+
+<script>
+    var year = new Date().getFullYear();
+    document.getElementById('date').setAttribute("min", year + "-01-01");
+    document.getElementById('date').setAttribute("max", year + "-12-31");
+
+
+</script>
+</html>

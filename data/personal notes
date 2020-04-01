@@ -1,0 +1,21 @@
+can add:
+password to incl 5C35 in order to become an admin
+
+adminhomee is the same as homee, but includes the additional button add new homework
+
+index --> homee/ adminhomee --> upload
+
+add sign out button [sessions?]
+
+ensure the homework list worksss!!!!******
+the details portion of homework is currently not working.
+- because hw cannot return 2 factors
+- if physics is selected as subject 1, then it will keep on overlapping the other hw.
+
+(may want to add in radio button below subjects for h1,h2/h3!)
+
+upload.html go back button back to adminhomee
+
+{{user}} to appear
+
+add "welcome! I am Social, your assistant."
